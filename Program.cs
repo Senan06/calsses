@@ -15,10 +15,10 @@ namespace calsses
     class Product
     {
         public string name;
-        public int costPrice;
-        public int saledPrice;
+        public double costPrice;
+        public double saledPrice;
 
-        public Product(string name, int costPrice, int saledPrice)
+        public Product(string name, double costPrice, double saledPrice)
         {
             this.name = name;
             this.costPrice = costPrice;
@@ -31,8 +31,8 @@ namespace calsses
     {
         public string authorName;
         public int pageCount;
-        public int discountPrecent;
-        public Book(string name, int costPrice, int saledPrice, string authorName, int pageCount, int discountPrecent) : base(string name, int costPrice, int saledPrice)
+        public double discountPrecent;
+        public Book(string name, double costPrice, double saledPrice, string authorName, int pageCount, double discountPrecent) : base(string name, double costPrice, double saledPrice)
         {
             this.pageCount = pageCount;
             this.authorName = authorName;
@@ -48,7 +48,7 @@ namespace calsses
             Console.WriteLine($"Mehsul endirim faizi: {discountPrecent}");
             Console.WriteLine($"Mehsulun endirimli satis qiymeti {GetDiscountedPrice()}");
         }
-        public int GetDiscountedPrice()
+        public double GetDiscountedPrice()
         {
             return saledPrice - ((saledPrice / 100) * discountPrecent);
         }
