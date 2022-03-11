@@ -32,7 +32,7 @@ namespace calsses
         public string authorName;
         public int pageCount;
         public double discountPrecent;
-        public Book(string name, double costPrice, double saledPrice, string authorName, int pageCount, double discountPrecent) : base(string name, double costPrice, double saledPrice)
+        public Book(string name, double costPrice, double saledPrice, string authorName, int pageCount, double discountPrecent) : base( name, costPrice, saledPrice)
         {
             this.pageCount = pageCount;
             this.authorName = authorName;
